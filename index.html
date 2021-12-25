@@ -52,7 +52,7 @@
         const prediction = await model.predict(webcam.canvas);
         if(prediction[0].probability.toFixed(2)>0.8){
         	labelContainer.childNodes[0].innerHTML ="えんぴつ"
-        }else if(prediction[0].probability.toFixed(2)>0.8){
+        }else if(prediction[1].probability.toFixed(2)>0.8){
         	labelContainer.childNodes[0].innerHTML ="消しゴム"
         }else{
         	labelContainer.childNodes[0].innerHTML ="不明"
